@@ -32,12 +32,10 @@
             });
             const result = await response.json();
 
-            // 添加用户和模型的对话到聊天记录中
             const chatHistory = document.getElementById('chat-history');
             chatHistory.innerHTML += `<p><strong>You:</strong> ${document.getElementById('message').value}</p>`;
             chatHistory.innerHTML += `<p><strong>Bot:</strong> ${result.response}</p>`;
 
-            // 清空输入框
             document.getElementById('message').value = '';
         };
     </script>
